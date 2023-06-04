@@ -15,6 +15,7 @@ jobs:
       INFURA_KEY: ${{ secrets.INFURA_KEY }}
       POLYGONSCAN_KEY: ${{ secrets.POLYGONSCAN_KEY }}
       ARBISCAN_KEY: ${{ secrets.ARBISCAN_KEY }}
+      ALCHEMY_PROVIDER: ${{ secrets.ALCHEMY_PROVIDER }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
