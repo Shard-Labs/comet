@@ -19,10 +19,10 @@ const createProposal = async () => {
     asset: pol_STMATIC,
     priceFeed: pol_STMATIC_PRICE_FEED,
     decimals: 18,
-    borrowCollateralFactor: exp(0.55, 18),
-    liquidateCollateralFactor: exp(0.6, 18),
-    liquidationFactor: exp(0.08, 18),
-    supplyCap: exp(5000000, 18)
+    borrowCollateralFactor: exp(0.60, 18),
+    liquidateCollateralFactor: exp(0.65, 18),
+    liquidationFactor: exp(0.07, 18),
+    supplyCap: exp(8000000, 18)
   };
 
   const addAssetConfigCalldata = hre.ethers.utils.defaultAbiCoder.encode(
