@@ -71,13 +71,8 @@ async function borrowCapacityForAsset(comet: CometInterface, actor: CometActor, 
 // Filters out assets on networks that cannot be liquidated by the open-source liquidation bot
 async function canBeLiquidatedByBot(ctx: CometContext, assetNum: number): Promise<boolean> {
   const unsupportedAssets = {
-<<<<<<< HEAD
-    // Reason: Most liquidity lives in MATICX / MATIC pools, which the liquidation bot cannot use if the base asset is not MATIC
-    MaticX: {
-=======
     // Reason: Most liquidity lives in STMATIC / MATIC pools, which the liquidation bot cannot use if the base asset is not MATIC
     StMatic: {
->>>>>>> ca03864 (feat: stmatic)
       network: 'polygon',
       deployments: ['usdc']
     }
@@ -135,11 +130,7 @@ for (let i = 0; i < MAX_ASSETS; i++) {
         ' == 20',
         // WMATIC
         ' == 300000',
-<<<<<<< HEAD
-        // MATICX
-=======
         // STMATIC
->>>>>>> ca03864 (feat: stmatic)
         ' == 0',
       ],
     },
@@ -313,11 +304,7 @@ for (let i = 0; i < MAX_ASSETS; i++) {
         ' == 100',
         // WMATIC
         ' == 2500000',
-<<<<<<< HEAD
-        // MATICX
-=======
         // STMATIC
->>>>>>> ca03864 (feat: stmatic)
         ' == 0',
       ]
     },
@@ -363,13 +350,8 @@ for (let i = 0; i < MAX_ASSETS; i++) {
         exp(20, 8),
         // WMATIC
         exp(5000, 18),
-<<<<<<< HEAD
-        // MATICX
-        exp(5, 18)
-=======
         // STMATIC
         exp(5, 18),
->>>>>>> ca03864 (feat: stmatic)
       ]
     },
     arbitrum: {
