@@ -59,14 +59,14 @@ jobs:
           esac
 
       - name: Seacrest
-        uses: hayesgm/seacrest@5748b3a066f517973ca2ca03d0af39bbf2b82d10
+        uses: hayesgm/seacrest@v1
         with:
           ethereum_url: "${{ fromJSON('{\"fuji\":\"https://api.avax-test.network/ext/bc/C/rpc\",\"kovan\":\"https://kovan.infura.io/v3/$INFURA_KEY\",\"mainnet\":\"https://mainnet.infura.io/v3/$INFURA_KEY\",\"goerli\":\"https://goerli.infura.io/v3/$INFURA_KEY\",\"mumbai\":\"https://polygon-mumbai.infura.io/v3/$INFURA_KEY\",\"polygon\":\"https://polygon-mainnet.g.alchemy.com/v2/C3eKH7nLiwldNQTjtS8l-ZcFoiQplaDf\",\"arbitrum-goerli\":\"https://arbitrum-goerli.infura.io/v3/$INFURA_KEY\",\"arbitrum\":\"https://arbitrum-mainnet.infura.io/v3/$INFURA_KEY\",\"base-goerli\":\"https://base-goerli.infura.io/v3/$INFURA_KEY\"}')[inputs.network] }}"
           port: 8585
         if: github.event.inputs.eth_pk == ''
 
       - name: Seacrest (governance network)
-        uses: hayesgm/seacrest@5748b3a066f517973ca2ca03d0af39bbf2b82d10
+        uses: hayesgm/seacrest@v1
         with:
           ethereum_url: "${{ fromJSON('{\"fuji\":\"https://api.avax-test.network/ext/bc/C/rpc\",\"kovan\":\"https://kovan.infura.io/v3/$INFURA_KEY\",\"mainnet\":\"https://mainnet.infura.io/v3/$INFURA_KEY\",\"goerli\":\"https://goerli.infura.io/v3/$INFURA_KEY\",\"mumbai\":\"https://polygon-mumbai.infura.io/v3/$INFURA_KEY\",\"polygon\":\"https://polygon-mainnet.g.alchemy.com/v2/C3eKH7nLiwldNQTjtS8l-ZcFoiQplaDf\",\"arbitrum-goerli\":\"https://arbitrum-goerli.infura.io/v3/$INFURA_KEY\",\"arbitrum\":\"https://arbitrum-mainnet.infura.io/v3/$INFURA_KEY\"}')[env.GOV_NETWORK] }}"
           port: 8685
