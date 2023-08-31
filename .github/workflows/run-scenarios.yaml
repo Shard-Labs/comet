@@ -8,14 +8,10 @@ jobs:
       fail-fast: false
       matrix:
 <<<<<<< HEAD
-<<<<<<< HEAD
         bases: [polygon]
 =======
         bases: [ mainnet, polygon]
 >>>>>>> 53816b6 (disable other scenarios)
-=======
-        bases: [polygon]
->>>>>>> 7bfa430 (update workflow)
     name: Run scenarios
     env:
       ETHERSCAN_KEY: ${{ secrets.ETHERSCAN_KEY }}
@@ -72,8 +68,4 @@ jobs:
       #   with:
       #     name: Scenario Tests (${{ matrix.bases }}) # Name of the check run which will be created
       #     path: scenario-results.json # Path to test results (inside artifact .zip)
-<<<<<<< HEAD
       #     reporter: mocha-json # Format of test results
-=======
-      #     reporter: mocha-json # Format of test results
->>>>>>> 7bfa430 (update workflow)
