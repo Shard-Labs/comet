@@ -28,7 +28,6 @@ import arbitrumRelationConfigMap from './deployments/arbitrum/usdc/relations';
 import arbitrumBridgedUsdcGoerliRelationConfigMap from './deployments/arbitrum-goerli/usdc.e/relations';
 import arbitrumGoerliNativeUsdcRelationConfigMap from './deployments/arbitrum-goerli/usdc/relations';
 import baseUsdbcRelationConfigMap from './deployments/base/usdbc/relations';
-import baseWethRelationConfigMap from './deployments/base/weth/relations';
 import baseGoerliRelationConfigMap from './deployments/base-goerli/usdc/relations';
 import baseGoerliWethRelationConfigMap from './deployments/base-goerli/weth/relations';
 import lineaGoerliRelationConfigMap from './deployments/linea-goerli/usdc/relations';
@@ -98,7 +97,7 @@ const networkConfigs: NetworkConfig[] = [
   {
     network: 'polygon',
     chainId: 137,
-    url: `https://polygon-mainnet.infura.io/v3/${INFURA_KEY}`,
+    url: `${process.env.ALCHEMY_PROVIDER}`,
   },
   {
     network: 'base',
@@ -309,7 +308,6 @@ const config: HardhatUserConfig = {
       },
       'base': {
         usdbc: baseUsdbcRelationConfigMap,
-        weth: baseWethRelationConfigMap
       },
       'base-goerli': {
         usdc: baseGoerliRelationConfigMap,
@@ -388,12 +386,6 @@ const config: HardhatUserConfig = {
         name: 'base-usdbc',
         network: 'base',
         deployment: 'usdbc',
-        auxiliaryBase: 'mainnet'
-      },
-      {
-        name: 'base-weth',
-        network: 'base',
-        deployment: 'weth',
         auxiliaryBase: 'mainnet'
       },
       {
