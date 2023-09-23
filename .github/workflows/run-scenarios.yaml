@@ -18,6 +18,7 @@ jobs:
       ARBISCAN_KEY: ${{ secrets.ARBISCAN_KEY }}
       BASESCAN_KEY: ${{ secrets.BASESCAN_KEY }}
       LINEASCAN_KEY: ${{ secrets.LINEASCAN_KEY }}
+      ALCHEMY_PROVIDER: ${{ secrets.ALCHEMY_PROVIDER }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

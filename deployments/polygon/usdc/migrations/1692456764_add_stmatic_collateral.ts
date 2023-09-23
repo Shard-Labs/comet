@@ -96,6 +96,10 @@ export default migration('1692456764_add_stmatic_collateral', {
     trace(`Created proposal ${proposalId}.`);
   },
 
+  async enacted(deploymentManager: DeploymentManager): Promise<boolean> {
+    return true;
+  },
+
   async verify(deploymentManager: DeploymentManager) {
     const { comet, configurator } = await deploymentManager.getContracts();
 
